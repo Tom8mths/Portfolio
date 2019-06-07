@@ -12,26 +12,34 @@
 </head>
 
 <body>
-  <nav>
-    <img src="./imgs/" alt="">
-    <ul>
-      <li>Home</li>
-      <li>Portfolio</li>
-      <li>Skills</li>
-    </ul>
-  </nav>
 
   <section>
     <div class="container">
-      <div class="img">
-
-      </div>
-      <h1>Matheus Satelos</h1>
-      <div class="medias">
-        <i class="far fa-envelope"></i>
-        <i class="far fa-envelope"></i>
-        <i class="far fa-envelope"></i>
-        <i class="far fa-envelope"></i>
+      <nav id="navbar">
+        <img src="./imgs/" alt="">
+        <ul>
+          <a class="navlist" href="#">
+            <li class="btn">Home</li>
+          </a>
+          <a class="navlist" href="#">
+            <li class="btn">Portfolio</li>
+          </a>
+          <a class="navlist" href="#">
+            <li class="btn">Skills</li>
+          </a>
+        </ul>
+      </nav>
+      <div class="container_items">
+        <div class="img">
+          <img src="./imgs/avatar4Artboard 1.png" alt="">
+        </div>
+        <h1>Matheus Satelos</h1>
+        <div class="medias">
+          <a href="https://github.com/Tom8mths"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://gitlab.com/Tommatty?nav_source=navbar"><i class="fab fa-gitlab fa-2x"></i></a>
+          <a href="https://dribbble.com/TomMatty"><i class="fab fa-dribbble fa-2x"></i></a>
+          <a id="email" href="#" data-tool-tip="matheus.satelos@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+        </div>
       </div>
     </div>
   </section>
@@ -39,17 +47,77 @@
   <section>
     <div class="content">
       <div class="big-text">
-        <h1>Designer X Coder</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
-          facilisis. </p>
+        <div class="background">
+          <div class="text-content">
+            <h1>Sobre mim</h1>
+            <p>Sou um desenvolvedor front-end que é apaixonado por HTML, CSS, Javascript, e em criar uma ótima
+              experiência
+              para os
+              usuários. Gosto bastante de criar designs no Photoshop e Illustrator, dando vida a alguns projetos
+              pessoais.
+              Procuro sempre dar o melhor de mim, e caso haja algo que eu não saiba, me esforço ao máximo até
+              aprende-lo.
+            </p>
+          </div>
+        </div>
       </div>
-      <h2>Some Title</h2>
-      <div class="diamonds">
+      <div class="titles">
+        <h2>Skills</h2>
+        <h2>Portfolio</h2>
+      </div>
+      <div class="bodytext">
+        <h3>Programação</h3>
+        <div class="images">
+          <div class="one">
+            <img src="./imgs/css.jpeg" alt=""><span>CSS</span>
+          </div>
+          <div class="two">
+            <img src="./imgs/html.png" alt=""><span>HTML</span>
+          </div>
+          <div class="three">
+            <img src="./imgs/javascript.png" alt=""><span>Javascript</span>
+          </div>
+        </div>
+        <p>Como principais línguas de programação, eu tenho conforto em usar Javascript, HTML e CSS(com pré-processador
+          SASS). Porém em alguns projetos pessoais e freelances, eu tive a oportunidade de aprender um pouco de VueJS e
+          AngularJS para integração de API. Tenho um pouco de familiaridade também com a framework de CSS, Bootstrap.
+        </p>
+        <div class="images">
+          <div class="one">
+            <img src="./imgs/github2.png" alt=""><span>Github</span>
+          </div>
+          <div class="two">
+            <img src="./imgs/gitlab.png" alt=""><span>Gitlab</span>
+          </div>
+        </div>
+        <p>Para versionamento de códigos eu uso essas duas principais plataformas, Github e Gitlab. Há algum tempo venho
+          com mais atividade buscando aprender mais sobre suas funcionalidades.
+        </p>
 
+        <h3>Design</h3>
+        <div class="images">
+          <div class="one">
+            <img src="./imgs/photoshoplogo.png" alt=""><span>Photoshop</span>
+          </div>
+          <div class="two">
+            <img src="./imgs/illustratorlogo.png" alt=""><span>Illustrator</span>
+          </div>
+          <div class="three">
+            <img src="./imgs/adobexdlogo.png" alt=""><span>AdobeXD</span>
+          </div>
+        </div>
+        <p>Como um desenvolvedor front-end, acredito ser importante conhecer ambos design e programação para atingir
+          a melhor interface de usuário possível. Portanto eu posso ajudar produzindo um design limpo e funcional. Tenho
+          bastante experiência com Photoshop e um pouco com Illustrator e AdobeXD.</p>
       </div>
     </div>
   </section>
+  <footer>
+    <div class="test">
+
+    </div>
+  </footer>
+  <script src="main.js"></script>
 </body>
 
 </html>

@@ -1,23 +1,86 @@
 @import "variables";
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Philosopher&display=swap");
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "Philosopher", sans-serif;
 }
 
-nav {
-  background-color: blue;
+.display-none {
+  display: none;
+}
+
+.navlist {
+  color: $white;
+}
+
+body {
+  background-color: #bababa;
+}
+
+#navbar {
   height: 4em;
+  font-size: 24px;
   width: 100%;
+  position: fixed;
+  z-index: 1;
+  transition: 250ms ease-in;
+  box-shadow: 1px 1px 1px 1px $orange;
   ul {
     top: 30%;
     position: relative;
     float: right;
-    li {
-      margin: 0 50px 0 50px;
-      display: inline;
-      list-style: none;
-      color: $white;
+    a {
+      text-decoration: none;
+      .btn {
+        cursor: pointer;
+        position: relative;
+        padding: 10px 20px;
+        background: transparent;
+        font-size: 28px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transition: all 0.5s;
+        &:after,
+        &:before {
+          content: " ";
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          border: 0px solid #fff;
+          transition: all 0.5s;
+        }
+        &:after {
+          top: -1px;
+          left: -1px;
+          border-top: 5px solid $orange;
+          border-left: 5px solid $orange;
+        }
+        &:before {
+          bottom: -1px;
+          right: -1px;
+          border-bottom: 5px solid $orange;
+          border-right: 5px solid $orange;
+        }
+        &:hover {
+          border-top-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+          color: $orange;
+
+          &:before,
+          &:after {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      li {
+        margin: 0 50px 0 50px;
+        display: inline;
+        list-style: none;
+      }
     }
   }
 }
@@ -25,16 +88,58 @@ nav {
 .container {
   height: 55em;
   width: 100%;
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  .img {
-    width: 100px;
-    height: 100px;
-    background: $white;
-    border-radius: 50%;
+  background-image: url(../imgs/backgoru23.png);
+  &_items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .img {
+      margin-top: 150px;
+      margin-left: 40px;
+    }
+    i {
+      color: $white;
+      transition: 0.5s;
+      &:hover {
+        color: $orange;
+        box-shadow: 0px 1px 5px 1px black;
+        transform: translateY(2px);
+      }
+    }
+    a[data-tool-tip] {
+      position: relative;
+      &::after {
+        content: attr(data-tool-tip);
+        display: block;
+        position: absolute;
+        background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
+        padding: 1em 3em;
+        color: $white;
+        bottom: 0;
+        left: calc(100% + 20px);
+        white-space: nowrap;
+        transform: translateX(-30px);
+        opacity: 0;
+        font-size: 0;
+        cursor: default;
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover::after {
+        transform: translateX(0);
+        opacity: 1;
+        font-size: 16px;
+      }
+    }
+  }
+  h1 {
+    margin: 20px;
+    font-size: 30px;
+    color: $white;
+    font-family: "Dancing Script", cursive;
+  }
+  i {
+    color: $white;
+    padding: 20px;
   }
 }
 
@@ -43,41 +148,116 @@ nav {
   top: -20em;
   margin: auto;
   width: 80%;
-  height: 75em;
-  background-color: green;
+  height: 100em;
+  background-color: $white;
   box-shadow: 0 0 15px rgb(51, 51, 51);
   .big-text {
-    background-color: $dark-purple;
+    background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
     width: 100%;
-    height: 23em;
     color: $white;
-    h1 {
-      padding: 70px;
-      text-align: center;
+    padding: 3px;
+    .background {
+      background-color: $dark-purple;
+      padding: 2rem;
     }
-    p {
-      text-align: center;
+
+    .text-content {
+      width: 70%;
+      margin: auto;
+      h1 {
+        font-size: 40px;
+        padding: 70px;
+        text-align: center;
+        &::after {
+          content: "";
+          display: block;
+          height: 3px;
+          background-color: $purple;
+          width: 30%;
+          margin: auto;
+        }
+      }
+      p {
+        text-align: center;
+        font-size: 26px;
+      }
     }
   }
   h2 {
     text-align: center;
+    margin: 50px 0 100px 0;
   }
-  .diamonds {
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-bottom: 70px solid red;
-    position: relative;
-    top: -50px;
-    &:after {
-      content: "";
-      position: absolute;
-      left: -50px;
-      top: 70px;
-      width: 0;
-      height: 0;
-      border: 50px solid transparent;
-      border-top: 70px solid red;
+  .titles {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    h2 {
+      color: $dark-purple;
+      cursor: pointer;
+      &:hover {
+        background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &::after {
+        content: "";
+        margin-top: 10px;
+        display: block;
+        border-radius: 100%;
+        height: 3px;
+        width: 100%;
+        background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
+      }
     }
   }
+  .bodytext {
+    width: 80%;
+    margin: auto;
+    h3 {
+      position: relative;
+      font-size: 24px;
+      font-weight: bold;
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 20px;
+        width: 20px;
+        background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
+        left: -30px;
+        top: 3px;
+        border-radius: 50%;
+      }
+    }
+    .images{
+      display: flex;
+      text-align: center;
+      .one {
+        margin: 20px;
+      }
+      .two {
+        margin: 20px;
+      }
+      .three {
+        margin: 20px;
+      }
+      span {
+        display: block;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    p {
+      font-size: 22px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+footer {
+  background-color: #1a0628;
+  height: 200px;
+  width: 100%;
 }
