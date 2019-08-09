@@ -22,7 +22,7 @@
             <li class="btn">Home</li>
           </a>
           <a class="navlist" href="#">
-            <li class="btn">Portfolio</li>
+            <li class="btn">Portifólio</li>
           </a>
           <a class="navlist" href="#">
             <li class="btn">Skills</li>
@@ -51,7 +51,7 @@
           <div class="text-content">
             <h1>Sobre mim</h1>
             <p>Sou um desenvolvedor front-end que é apaixonado por HTML, CSS, Javascript, e em criar uma ótima
-              experiência
+              experiência visual
               para os
               usuários. Gosto bastante de criar designs no Photoshop e Illustrator, dando vida a alguns projetos
               pessoais.
@@ -61,54 +61,71 @@
           </div>
         </div>
       </div>
-      <div class="titles">
-        <h2>Skills</h2>
-        <h2>Portfolio</h2>
-      </div>
-      <div class="bodytext">
-        <h3>Programação</h3>
-        <div class="images">
-          <div class="one">
-            <img src="./imgs/css.jpeg" alt=""><span>CSS</span>
-          </div>
-          <div class="two">
-            <img src="./imgs/html.png" alt=""><span>HTML</span>
-          </div>
-          <div class="three">
-            <img src="./imgs/javascript.png" alt=""><span>Javascript</span>
-          </div>
+      <div class="tabs">
+        <div class="titles">
+          <h2 class="tablinks" onclick="openTab(event, 'Skills')">Skills</h2>
+          <h2 class="tablinks" onclick="openTab(event, 'Portfolio')">Portifólio</h2>
         </div>
-        <p>Como principais línguas de programação, eu tenho conforto em usar Javascript, HTML e CSS(com pré-processador
-          SASS). Porém em alguns projetos pessoais e freelances, eu tive a oportunidade de aprender um pouco de VueJS e
-          AngularJS para integração de API. Tenho um pouco de familiaridade também com a framework de CSS, Bootstrap.
-        </p>
-        <div class="images">
-          <div class="one">
-            <img src="./imgs/github2.png" alt=""><span>Github</span>
+        <div id="Skills" class="bodytext">
+          <h3>Programação</h3>
+          <div class="images">
+            <div class="one">
+              <img src="./imgs/css.jpeg" alt=""><span>CSS</span>
+            </div>
+            <div class="two">
+              <img src="./imgs/html.png" alt=""><span>HTML</span>
+            </div>
+            <div class="three">
+              <img src="./imgs/javascript.png" alt=""><span>Javascript</span>
+            </div>
           </div>
-          <div class="two">
-            <img src="./imgs/gitlab.png" alt=""><span>Gitlab</span>
+          <p>Como principais línguas de programação, eu tenho conforto em usar Javascript, HTML e CSS(com
+            pré-processador
+            SASS). Porém em alguns projetos pessoais e freelances, eu tive a oportunidade de aprender um pouco de VueJS
+            e
+            AngularJS para integração de API. Tenho um pouco de familiaridade também com a framework de CSS, Bootstrap.
+          </p>
+          <div class="images">
+            <div class="one">
+              <img src="./imgs/github2.png" alt=""><span>Github</span>
+            </div>
+            <div class="two">
+              <img src="./imgs/gitlab.png" alt=""><span>Gitlab</span>
+            </div>
           </div>
-        </div>
-        <p>Para versionamento de códigos eu uso essas duas principais plataformas, Github e Gitlab. Há algum tempo venho
-          com mais atividade buscando aprender mais sobre suas funcionalidades.
-        </p>
+          <p>Para versionamento de códigos eu uso essas duas principais plataformas, Github e Gitlab. Há algum tempo
+            venho
+            com mais atividade buscando aprender mais sobre suas funcionalidades.
+          </p>
 
-        <h3>Design</h3>
-        <div class="images">
-          <div class="one">
-            <img src="./imgs/photoshoplogo.png" alt=""><span>Photoshop</span>
+          <h3>Design</h3>
+          <div class="images">
+            <div class="one">
+              <img src="./imgs/photoshoplogo.png" alt=""><span>Photoshop</span>
+            </div>
+            <div class="two">
+              <img src="./imgs/illustratorlogo.png" alt=""><span>Illustrator</span>
+            </div>
+            <div class="three">
+              <img src="./imgs/adobexdlogo.png" alt=""><span>AdobeXD</span>
+            </div>
           </div>
-          <div class="two">
-            <img src="./imgs/illustratorlogo.png" alt=""><span>Illustrator</span>
-          </div>
-          <div class="three">
-            <img src="./imgs/adobexdlogo.png" alt=""><span>AdobeXD</span>
+          <p>Como um desenvolvedor front-end, acredito ser importante conhecer ambos design e programação para atingir
+            a melhor interface de usuário possível. Portanto eu posso ajudar produzindo um design limpo e funcional.
+            Tenho
+            bastante experiência com Photoshop e um pouco com Illustrator e AdobeXD.</p>
+          <h3>Línguas</h3>
+        
+          <p>Inglês - Avançado/Fluente</p>
+        </div>
+        <div id="Portfolio" class="bodytext">
+          <h3>Portifólio</h3>
+          <div class="portfolio-imgs">
+            <div class="site-img">
+              <img onmouseover="changeImage()" id="imgone" src="./imgs/teste.png" alt="">
+            </div>
           </div>
         </div>
-        <p>Como um desenvolvedor front-end, acredito ser importante conhecer ambos design e programação para atingir
-          a melhor interface de usuário possível. Portanto eu posso ajudar produzindo um design limpo e funcional. Tenho
-          bastante experiência com Photoshop e um pouco com Illustrator e AdobeXD.</p>
       </div>
     </div>
   </section>

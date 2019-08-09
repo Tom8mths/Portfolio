@@ -10,3 +10,23 @@ window.onscroll = function() {
     nav.style.background = 'transparent'
   }
 }
+
+function openTab(evt, tabName) {
+  var i, bodytext, tablinks;
+  bodytext = document.getElementsByClassName("bodytext");
+  for (i = 0; i < bodytext.length; i++) {
+    bodytext[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < bodytext.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function changeImage() {
+  console.log("teste")
+  var image = document.getElementById("imgone");
+  image.changeImage = "./imgs/site2.png"
+}

@@ -179,7 +179,7 @@ body {
   top: -20em;
   margin: auto;
   width: 80%;
-  height: 100em;
+  height: 110em;
   background-color: #fff;
   -webkit-box-shadow: 0 0 15px #333333;
           box-shadow: 0 0 15px #333333;
@@ -240,12 +240,16 @@ body {
 .content .titles h2 {
   color: #260c38;
   cursor: pointer;
+  font-size: 26px;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
 }
 
 .content .titles h2:hover {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#3e145c), color-stop(#7a0b66), color-stop(#b10162), color-stop(#df2452), to(#ff5338));
   background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
   -webkit-background-clip: text;
+  font-size: 36px;
   -webkit-text-fill-color: transparent;
 }
 
@@ -260,12 +264,23 @@ body {
   background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
 }
 
+.content .active {
+  position: relative;
+  font-size: 36px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#3e145c), color-stop(#7a0b66), color-stop(#b10162), color-stop(#df2452), to(#ff5338));
+  background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .content .bodytext {
   width: 80%;
   margin: auto;
+  display: none;
 }
 
 .content .bodytext h3 {
+  padding-bottom: 20px;
   position: relative;
   font-size: 24px;
   font-weight: bold;
@@ -315,6 +330,22 @@ body {
 .content .bodytext p {
   font-size: 22px;
   padding-bottom: 50px;
+}
+
+.portfolio-imgs {
+  background-color: #7a0b66;
+  width: 100%;
+  height: 20em;
+}
+
+.portfolio-imgs .site-img {
+  width: 30%;
+  height: inherit;
+}
+
+.portfolio-imgs .site-img img {
+  width: 20em;
+  height: 20em;
 }
 
 footer {

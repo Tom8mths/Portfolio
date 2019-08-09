@@ -148,7 +148,7 @@ body {
   top: -20em;
   margin: auto;
   width: 80%;
-  height: 100em;
+  height: 110em;
   background-color: $white;
   box-shadow: 0 0 15px rgb(51, 51, 51);
   .big-text {
@@ -194,9 +194,12 @@ body {
     h2 {
       color: $dark-purple;
       cursor: pointer;
+      font-size: 26px;
+      transition: 250ms ease-in-out;
       &:hover {
         background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
         -webkit-background-clip: text;
+        font-size: 36px;
         -webkit-text-fill-color: transparent;
       }
       &::after {
@@ -210,10 +213,19 @@ body {
       }
     }
   }
+  .active {
+    position: relative;
+    font-size: 36px;
+    background-image: linear-gradient(to right top, #3e145c, #7a0b66, #b10162, #df2452, #ff5338);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .bodytext {
     width: 80%;
     margin: auto;
+    display: none;
     h3 {
+      padding-bottom: 20px;
       position: relative;
       font-size: 24px;
       font-weight: bold;
@@ -255,6 +267,21 @@ body {
     }
   }
 }
+
+.portfolio-imgs {
+  background-color: #7a0b66;
+  width: 100%;
+  height: 20em;
+  .site-img {
+    width: 30%;
+    height: inherit;
+    img {
+      width: 20em;
+      height: 20em;
+    }
+  }
+}
+
 
 footer {
   background-color: #1a0628;
